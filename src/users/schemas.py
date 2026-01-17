@@ -1,7 +1,8 @@
 from pydantic import BaseModel
+import uuid
 
 class User(BaseModel):
-    id:int
+    uid:uuid.UUID
     name:str
     username:str
     email:str
@@ -10,7 +11,6 @@ class User(BaseModel):
     login_count:int
 
 class UserCreateModel(BaseModel):
-    id:int 
     name:str
     username:str
     email:str
